@@ -1,0 +1,25 @@
+version: '3'
+services:
+
+  percona:
+    image: percona
+    environment:
+      MYSQL_ROOT_PASSWORD: "simpleRootPasswd5"
+    restart: always
+    ports:
+      - "3306:3306"
+
+  pma:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      MYSQL_ROOT_PASSWORD: "simpleRootPasswd5"
+    links:
+      - percona:db
+    ports:
+      - "8080:80"
+    restart: always
+
+  mongodb:
+    image: mongo:3.6.7
+    ports:
+      - "27017:27017"
