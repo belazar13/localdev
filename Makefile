@@ -6,3 +6,6 @@ start_percona:
 
 start_pma:
 	docker-compose up -d pma
+
+start_postgres:
+	docker-compose up -d postgres
