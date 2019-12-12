@@ -23,3 +23,6 @@ add_go_to_profile:
 
 install_go: download_go extract_go add_go_to_profile
 	echo "Done"
+
+create_global_git_ignore:
+	git config --global core.excludesfile ~/.gitignore
