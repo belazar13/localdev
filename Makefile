@@ -1,4 +1,5 @@
 GO_ARCH?=go1.12.14.linux-amd64.tar.gz
+PROTOBUF_VERSION?=3.11.2
 
 start_mongo:
 	docker-compose up -d mongodb
@@ -38,3 +39,14 @@ start_jaeger:
       -p 14268:14268 \
       -p 9411:9411 \
       jaegertracing/all-in-one:latest
+
+install_protobuf:
+	echo "Install protobuf, version: [${PROTOBUF_VERSION}]"
+	cd /tmp
+	curl -OL https://github.com/google/protobuf/releases/download/v${PROTOBUF_VERSION}/protoc-${PROTOBUF_VERSION}-linux-x86_64.zip
+	unzip protoc-${PROTOBUF_VERSION}-linux-x86_64.zip -d protoc3
+	sudo mv protoc3/bin/* /usr/local/bin/
+	sudo mv protoc3/include/* /usr/local/include/
+	echo "Install protobuf plugins"
+	go get -u -v github.com/golang/protobuf/protoc-gen-go
+	go get -u -v github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
