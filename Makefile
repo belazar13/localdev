@@ -41,6 +41,7 @@ start_jaeger:
       jaegertracing/all-in-one:latest
 
 install_protobuf:
+	echo "Check newest version: https://github.com/protocolbuffers/protobuf/releases/"
 	echo "Install protobuf, version: [${PROTOBUF_VERSION}]"
 	cd /tmp
 	curl -OL https://github.com/google/protobuf/releases/download/v${PROTOBUF_VERSION}/protoc-${PROTOBUF_VERSION}-linux-x86_64.zip
