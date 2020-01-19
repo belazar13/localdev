@@ -17,3 +17,10 @@ PS1="\[\e]0;\u@\h: \w\a\]\[\033[0;33m\]\t\n\[\033[01;31m\]\u@\h\[\033[00m\]:\[\0
 
 ### Special magic to led keyboard - Defender Nova SM-690L(45690)
 xset led named "Scroll Lock"
+
+
+## GIT
+
+### Enable private repo as Go mod
+
+git config --global url."ssh://git@github.com/".insteadOf "https://github.com/"
