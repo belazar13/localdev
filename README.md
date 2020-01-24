@@ -18,6 +18,15 @@ PS1="\[\e]0;\u@\h: \w\a\]\[\033[0;33m\]\t\n\[\033[01;31m\]\u@\h\[\033[00m\]:\[\0
 ### Special magic to led keyboard - Defender Nova SM-690L(45690)
 xset led named "Scroll Lock"
 
+### Base64 helpers
+b64e () {
+  echo "$1" | base64
+}
+
+b64d () {
+  echo "$1" | base64 --decode
+}
+
 
 ## GIT
 
