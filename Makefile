@@ -13,6 +13,12 @@ start_pma:
 start_postgres:
 	docker-compose up -d postgres
 
+start_memcached:
+	docker-compose up -d memcached
+
+start_redis:
+	docker-compose up -d redis
+
 download_go:
 	wget https://dl.google.com/go/${GO_ARCH}
 
