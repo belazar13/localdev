@@ -1,4 +1,4 @@
-GO_ARCH?=go1.12.14.linux-amd64.tar.gz
+GO_ARCH?=go1.14.linux-amd64.tar.gz
 PROTOBUF_VERSION?=3.11.2
 
 start_mongo:
@@ -23,12 +23,13 @@ download_go:
 	wget https://dl.google.com/go/${GO_ARCH}
 
 extract_go:
+	sudo rm -rf /usr/local/go
 	sudo tar -C /usr/local -xzf ${GO_ARCH}
 
 add_go_to_profile:
 	echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 
-install_go: download_go extract_go add_go_to_profile
+install_go: download_go extract_go
 	echo "Done"
 
 create_global_git_ignore:
