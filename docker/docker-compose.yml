@@ -52,7 +52,7 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - /opt/projects/prometheus/:/tmp/
+      - /opt/projects/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
 
   grafana:
     image: grafana/grafana
