@@ -45,3 +45,17 @@ services:
     restart: "no"
     ports:
       - "6379:6379"
+  
+  prometheus:
+    image: prom/prometheus
+    restart: "no"
+    ports:
+      - "9090:9090"
+    volumes:
+      - /opt/projects/prometheus/:/tmp/
+
+  grafana:
+    image: grafana/grafana
+    restart: "no"
+    ports:
+      - "3000:3000"

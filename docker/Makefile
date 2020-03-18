@@ -15,3 +15,9 @@ start_memcached:
 
 start_redis:
 	docker-compose up -d redis
+
+start_prometheus:
+	docker-compose up -d prometheus
+
+start_grafana:
+	docker-compose up -d grafana
