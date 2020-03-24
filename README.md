@@ -33,3 +33,7 @@ b64d () {
 ### Enable private repo as Go mod
 
 git config --global url."ssh://git@github.com/".insteadOf "https://github.com/"
+
+ts() {
+  date +%s
+}
