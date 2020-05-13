@@ -4,6 +4,9 @@ start_mongo:
 start_percona:
 	docker-compose up -d percona
 
+start_percona8:
+	docker-compose up -d percona8
+
 start_pma:
 	docker-compose up -d pma
 

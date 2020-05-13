@@ -9,6 +9,14 @@ services:
     ports:
       - "3306:3306"
 
+  percona8:
+    image: percona:8.0.19-10-centos
+    environment:
+      MYSQL_ROOT_PASSWORD: "simpleRootPasswd5"
+    restart: "no"
+    ports:
+      - "3306:3306"
+
   pma:
     image: phpmyadmin/phpmyadmin
     environment:
