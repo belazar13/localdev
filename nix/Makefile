@@ -1,4 +1,4 @@
-GO_ARCH?=go1.14.linux-amd64.tar.gz
+GO_ARCH?=go1.14.3.linux-amd64.tar.gz
 PROTOBUF_VERSION?=3.11.2
 
 download_go:
