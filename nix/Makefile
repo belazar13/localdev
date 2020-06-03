@@ -1,5 +1,5 @@
 GO_ARCH?=go1.14.3.linux-amd64.tar.gz
-PROTOBUF_VERSION?=3.11.2
+PROTOBUF_VERSION?=3.12.3
 
 download_go:
 	wget https://dl.google.com/go/${GO_ARCH}
