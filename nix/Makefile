@@ -12,6 +12,7 @@ add_go_to_profile:
 	echo 'export PATH=$$PATH:/usr/local/go/bin' >> ~/.bashrc
 
 install_go: download_go extract_go
+	export PATH=$PATH:/usr/local/go/bin
 	echo "Done"
 
 create_global_git_ignore:
@@ -41,3 +42,5 @@ install_protobuf:
 	echo "Install protobuf plugins"
 	go get -u -v github.com/golang/protobuf/protoc-gen-go
 	go get -u -v github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
+	go get -u -v github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
+	go get -u -vgithub.com/gogo/protobuf/protoc-gen-gofast
