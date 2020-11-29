@@ -12,5 +12,5 @@ sudo apt-get update
 ### Install PHP and Modules
 
 ```bash
-apt install php7.4 php7.4-{bcmath,bz2,curl,gd,igbinary,mbstring,memcached,mongodb,msgpack,mysql,redis,xdebug,xml,xsl,zip}
+apt install php7.4 php7.4-{bcmath,bz2,curl,gd,igbinary,mbstring,memcached,mongodb,msgpack,mysql,redis,xdebug,xml,xsl,zip,dev}
 ```
