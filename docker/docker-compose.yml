@@ -49,7 +49,7 @@ services:
       - "11211:11211"
 
   redis:
-    image: redis:5.0.7
+    image: redis:6.2.1
     restart: "no"
     ports:
       - "6379:6379"
