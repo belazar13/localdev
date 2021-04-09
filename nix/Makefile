@@ -1,4 +1,4 @@
-GO_ARCH?=go1.15.5.linux-amd64.tar.gz
+GO_ARCH?=go1.16.3.linux-amd64.tar.gz
 PROTOBUF_VERSION?=3.14.0
 
 download_go:
@@ -45,5 +45,6 @@ install-proto-bins:
 	GO111MODULE=on go install google.golang.org/protobuf/cmd/protoc-gen-go
 	GO111MODULE=off go get github.com/gogo/protobuf/protoc-gen-gofast
 	GO111MODULE=on go install github.com/utrack/clay/v2/cmd/protoc-gen-goclay
+	GO111MODULE=on go get google.golang.org/grpc/cmd/protoc-gen-go-grpc
 
 install-protobuf: install-protobuf-src install-proto-bins
